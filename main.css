@@ -1,0 +1,60 @@
+form {
+    margin-top: 40px;
+}
+
+input, textarea, button {
+display: block;
+padding: 8px;
+margin-bottom: 8px;
+width: 50%;
+resize: none;
+}
+
+button {
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    /* Aponta que o botão é clicável */
+    font-style: italic;
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Cor ao passar o mouse */
+}
+
+.success-message {
+    background-color: #0056b3;
+    width: 50%;
+        padding: 16px;
+    /* Espaçamento interno */
+    display: none;
+    border: 1px solid #ccc;
+    /* Borda leve */
+    border-radius: 5px;
+    /* Arredondamento das bordas */
+    box-sizing: border-box;
+    /* Inclui padding e borda no tamanho total */
+}
+
+.error-message {
+    font-size: 12px;
+    padding: 8px;
+    width: 50%;
+    background-color: red;
+    color: #fff;
+    margin-bottom: 8px;
+    display: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input.error {
+    color: red;
+    border-color: red;
+    outline-color: red;
+}
