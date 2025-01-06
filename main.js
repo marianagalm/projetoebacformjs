@@ -1,4 +1,4 @@
-const form = document.getElementById('form-desposito');
+const form = document.getElementById('form-deposito');
 const nomeBeneficiario = document.getElementById('nome-beneficiario');
 let formEValido = false;
 
@@ -8,24 +8,23 @@ function validaNome(nomeCompleto) {
 }
 
 form.addEventListener('submit', function (e) {
-
     e.preventDefault();
 
-    const nomeBeneficario = document.getElementById("numero-conta");
+    const numeroContaBeneficiario = document.getElementById("numero-conta");
     const valorDeposito = document.getElementById('valor-deposito');
-    const mensagemSucesso = `Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficario.value}</b> - conta: <b>${numeroContaBeneficiario.value}</b>`;
+    const mensagemSucesso = `Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</b> - conta: <b>${numeroContaBeneficiario.value}</b>`;
 
-    formEValido = validaNome(nomeBeneficario.value)
+    formEValido = validaNome(nomeBeneficiario.value)
     if (formEValido) {
         const containerMensagemSucesso = document.querySelector('.success-message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
         containerMensagemSucesso.style.display = 'block';
 
-        nomeBeneficario.value = " ";
-        numeroContaBeneficiario.value = " ";
-        valorDeposito.value = " ";
+        nomeBeneficario.value = '';
+        numeroContaBeneficiario.value = '';
+        valorDeposito.value = '';
     } else {
-        nomeBeneficario.style.border = '1px solid red';
+        nomeBeneficiario.style.border = '1px solid red';
         document.querySelector('.error-message').style.display = 'block';
     }
 })
@@ -38,7 +37,7 @@ nomeBeneficiario.addEventListener('keyup', function (e) {
         nomeBeneficiario.classList.add('error');
         document.querySelector('.error-message').style.display = "block";
     } else {
-        nomeBeneficiario.style = " ";
+        nomeBeneficiario.style = '';
         document.querySelector('.error-message').style.display = 'none';
     }
 });
