@@ -8,6 +8,7 @@ function validaNome(nomeCompleto) {
 }
 
 form.addEventListener('submit', function (e) {
+    
     e.preventDefault();
 
     const numeroContaBeneficiario = document.getElementById("numero-conta");
